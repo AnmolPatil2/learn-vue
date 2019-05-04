@@ -10,8 +10,16 @@
 <body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
     <div id="root" class="container">
-        <model v-show="visible" @close="visible = false "></model>
-        <button type="button" @click=" visible = true ">Show</button>
+        <tab name="About us">
+            <tab>F</tab>
+        </tab>
+        <tab name="About u" :selected="ture">
+                <tab>u</tab>
+            </tab>
+                              <tab name="About all">
+                    <tab>c</tab>
+                </tab>
+
     </div>
       
       

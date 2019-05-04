@@ -1,16 +1,20 @@
-Vue.component(name = 'model',{
-    template: `<div class="modal is-active">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <!-- Any other Bulma elements you want -->
-      <div class="box">
-      <p>hello</p>
-    </div>
-    <button class="modal-close is-large" aria-label="close" @click="$emit('close')"></button>
+Vue.component(name = 'tab',{
+    template: `<div><div class="tabs">
+    <ul>
+      <li class="is-active"><a>Pictures</a></li>
+      <li><a>Music</a></li>
+      <li><a>Videos</a></li>
+      <li><a>Documents</a></li>
+    </ul>
   </div>
-
-</div>`
+  <div class="tab-details"><slot></slot></div></div>
+  `,
+  mounted(){
+    console.log(this.$children);
+  
+  }
 }
+
 );
 
 new Vue({
